@@ -1,0 +1,48 @@
+{
+  "project_info": {
+
+    "project_number": "766937569914",
+    "project_id": "e-rickshaw-455f6",
+    "storage_bucket": "e-rickshaw-455f6.appspot.com"
+
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766937569914:android:92fa3539630f2c3a5f39c3",
+        "android_client_info": {
+          "package_name": "com.example.erickshaw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766937569914-fsfmaca5rru80r0t2o8qldvme7jgffhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjmWFsc8cz09F0L8cgGFCvf6ERqftapzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766937569914-fsfmaca5rru80r0t2o8qldvme7jgffhv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "766937569914-kj8rp6fbmmbfiqigh4hqqddktuopfcj9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.erickshaw"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
