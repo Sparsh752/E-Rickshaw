@@ -10,3 +10,24 @@ The following people have contributed a lot in this project without whom the pro
   <li><a href="https://github.com/Yash-jar">Yash Raj Singh</a></li>
   <li><a href="https://github.com/tanisha-salvi">Tanisha Salvi</a></li>
 </ul>
+
+## Installation
+
+Clone this repo to you local storage
+
+```bash
+  run flutter pub get 
+  flutter run
+```
+
+## Contributing
+
+Contributions are always welcome! :tada:
+
+Please adhere to Codepeak's 'code of conduct'.
+
+## Tech Stack
+
+**Client:** Flutter, Dart
+
+**Server:** Firebase
