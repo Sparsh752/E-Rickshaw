@@ -1,16 +1,12 @@
-# erickshaw
+# E-Rickshaw
 
-A new Flutter project.
+A useful app for the E-Rickshaw drivers and their customers in IITG Campus. This app displays live requests of the passengers to the E-Rickshaw drivers which they can accept or reject. Once accepted, information like number, name, number-plate etc is exchanged between the driver and the passenger. 
 
-## Getting Started
+## Acknowledgements
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The following people have contributed a lot in this project without whom the project won't be possible:
+<ul>
+  <li>Sarvesh Sarjerao Gholap</li>
+  <li>Yash Raj Singh</li>
+  <li>Tanisha Salvi</li>
+</ul>
