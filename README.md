@@ -6,7 +6,7 @@ A useful app for the E-Rickshaw drivers and their customers in IITG Campus. This
 
 The following people have contributed a lot in this project without whom the project won't be possible:
 <ul>
-  <li>Sarvesh Sarjerao Gholap</li>
-  <li>Yash Raj Singh</li>
-  <li>Tanisha Salvi</li>
+  <li><a href="https://github.com/sarg19">Sarvesh Sarjerao Gholap</a></li>
+  <li><a href="https://github.com/Yash-jar">Yash Raj Singh</a></li>
+  <li><a href="https://github.com/tanisha-salvi">Tanisha Salvi</a></li>
 </ul>
