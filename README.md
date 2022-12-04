@@ -17,8 +17,10 @@ Clone this repo to your local storage using
 
 ```bash
   git init
-  git clone
+  git clone https://github.com/Sparsh752/E-Rickshaw.git
 ```
+
+Open Android Studio, VS Code or any other editor and run the following command on the terminal.
 
 ```bash
   run flutter pub get 
