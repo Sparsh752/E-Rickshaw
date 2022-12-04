@@ -23,7 +23,7 @@ Clone this repo to your local storage using
 Open Android Studio, VS Code or any other editor and run the following command on the terminal.
 
 ```bash
-  run flutter pub get 
+  flutter pub get 
   flutter run
 ```
 
