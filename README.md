@@ -31,3 +31,9 @@ Please adhere to Codepeak's 'code of conduct'.
 **Client:** Flutter, Dart
 
 **Server:** Firebase
+
+## Contact
+
+If any doubt, feel free to contact me on Whatsapp or mail.
+Number: 8770768952
+Email: sparshmittal2311@gmail.com
