@@ -34,6 +34,6 @@ Please adhere to Codepeak's 'code of conduct'.
 
 ## Contact
 
-If any doubt, feel free to contact me on Whatsapp or mail.
-Number: 8770768952
+If any doubt, feel free to contact me on Whatsapp or mail. <br/>
+Number: 8770768952 <br/>
 Email: sparshmittal2311@gmail.com
