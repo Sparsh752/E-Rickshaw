@@ -13,7 +13,7 @@ The following people have contributed a lot in this project without whom the pro
 
 ## Installation
 
-Clone this repo to you local storage
+Clone this repo to your local storage
 
 ```bash
   run flutter pub get 
