@@ -33,6 +33,10 @@ Contributions are always welcome! :tada:
 
 Please adhere to Codepeak's 'code of conduct'.
 
+## How to fork this repo
+
+![](./fork.png)
+
 ## Tech Stack
 
 **Client:** Flutter, Dart
