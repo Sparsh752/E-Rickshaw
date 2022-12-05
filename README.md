@@ -33,6 +33,25 @@ Contributions are always welcome! :tada:
 
 Please adhere to Codepeak's 'code of conduct'.
 
+## How to fork this repo
+
+![](./fork.png)
+
+2) There will be a prompt to change the name of the repository , fill accordingly.
+
+3) Click on create fork.
+
+## How to create a Pull Request
+
+1) On pushing changes to a forked repository , the repository page on github shows the option to create a Pull request-
+![](./pull.png)
+
+2) You can view what changes have been made and If there are any conflicts 
+![](./changes.png)
+![](./createreq.png)
+
+3) Give appropriate title and add a meaningful description then create pull request.
+
 ## Tech Stack
 
 **Client:** Flutter, Dart
