@@ -67,7 +67,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                      await FirebaseAuth.instance
                         .sendPasswordResetEmail(email: _email);
                      Fluttertoast.showToast(
-                         msg: "Sent reset link successfully"
+                         msg: "Sent reset link successfully. The link might be in your spam folder"
                      );
                      if(!mounted) return;
                      Navigator.pop(context);
