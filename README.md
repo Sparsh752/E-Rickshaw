@@ -44,13 +44,16 @@ Please adhere to Codepeak's 'code of conduct'.
 ## How to create a Pull Request
 
 1) On pushing changes to a forked repository , the repository page on github shows the option to create a Pull request-
-![](./pull.png)
+![image](https://user-images.githubusercontent.com/94468600/205556626-678da1fc-db11-4f3d-9f74-f8049ea3f59e.png)
+
 
 2) You can view what changes have been made and If there are any conflicts 
-![](./changes.png)
-![](./createreq.png)
+![image](https://user-images.githubusercontent.com/94468600/205556705-ee05f457-c602-4ea6-a98d-c0c90e6a9f3b.png)
+
 
 3) Give appropriate title and add a meaningful description then create pull request.
+
+![image](https://user-images.githubusercontent.com/94468600/205556758-6a29fb58-f4b8-4e11-b824-5c88a2c51626.png)
 
 ## Tech Stack
 
