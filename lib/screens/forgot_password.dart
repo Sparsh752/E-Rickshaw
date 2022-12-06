@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -47,11 +45,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     });
                   },
                   keyboardType: TextInputType.emailAddress,
-                  // ignore: prefer_const_constructors
                   decoration: InputDecoration(
                       hintText: 'Email',
                       hintStyle:
-                          // ignore: prefer_const_constructors
                           TextStyle(color: Color.fromRGBO(81, 99, 101, 1.0)),
                       border: InputBorder.none),
                 ),
@@ -68,13 +64,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 onPressed: () async {
                   FocusManager.instance.primaryFocus?.unfocus();
                   try {
-                    await FirebaseAuth.instance
+                     await FirebaseAuth.instance
                         .sendPasswordResetEmail(email: _email);
-                    Fluttertoast.showToast(
-                        msg:
-                            "Sent reset link successfully. The link might be in your spam folder");
-                    if (!mounted) return;
-                    Navigator.pop(context);
+                     Fluttertoast.showToast(
+                         msg: "Sent reset link successfully. The link might be in your spam folder"
+                     );
+                     if(!mounted) return;
+                     Navigator.pop(context);
                   } on FirebaseAuthException catch (error) {
                     switch (error.code) {
                       case "user-not-found":
