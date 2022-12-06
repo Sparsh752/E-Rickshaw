@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/adittyagupta/AndroidStudioProjects/E-Rickshaw/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/adittyagupta/AndroidStudioProjects/E-Rickshaw/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
