@@ -4,7 +4,7 @@ import 'package:erickshaw/screens/customer.dart';
 import 'package:erickshaw/screens/select_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:erickshaw/screens/forgotpasswordpage.dart';
+import 'package:erickshaw/screens/forgot_password.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -159,7 +159,7 @@ class _LoginState extends State<Login> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ForgotPasswordPage()));
+                            builder: (context) => ForgotPassword()));
                   },
                   child: Text("Forgot Password?",
                       style: TextStyle(
