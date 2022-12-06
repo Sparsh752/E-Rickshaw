@@ -6,7 +6,7 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+      margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
       width: 230,
       height: 50,
       child: ElevatedButton(
@@ -22,7 +22,7 @@ class Button extends StatelessWidget {
                 )
             ),
         ),
-        child:Text(
+        child:const Text(
           'Log in',
           style: TextStyle(
               fontSize: 16,
@@ -44,7 +44,7 @@ class _TFieldState extends State<TField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20.0),
+      margin:const EdgeInsets.symmetric(horizontal: 20.0),
       height: 50,
       width: 280,
       // color: Colors.grey,
@@ -55,7 +55,7 @@ class _TFieldState extends State<TField> {
           borderRadius: BorderRadius.circular(6.0),
           border: Border.all( color: Color.fromRGBO(127, 157, 156, 1.0),)
       ),
-      child: Padding(
+      child: const Padding(
         padding: EdgeInsets.fromLTRB(15, 3, 15, 3),
         child: TextField(
           decoration: InputDecoration(
