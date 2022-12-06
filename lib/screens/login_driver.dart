@@ -4,7 +4,7 @@ import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
 import 'package:erickshaw/screens/driversign.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:erickshaw/screens/forgotpasswordpage.dart';
+import 'package:erickshaw/screens/forgot_password.dart';
 
 class Login_Driver extends StatefulWidget {
   const Login_Driver({Key? key}) : super(key: key);
@@ -160,7 +160,7 @@ class _Login_DriverState extends State<Login_Driver> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ForgotPasswordPage()));
+                            builder: (context) => ForgotPassword()));
                   },
                   child: Text("Forgot Password?",
                       style: TextStyle(
