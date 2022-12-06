@@ -1,19 +1,21 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors
 
-import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
-import 'package:erickshaw/screens/driversign.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:erickshaw/screens/forgotpasswordpage.dart';
+import 'package:erickshaw/screens/customer.dart';
+import 'package:erickshaw/screens/forgot_password.dart';
+import 'package:erickshaw/screens/select_route.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:erickshaw/screens/user_choice_signup.dart';
 
-class Login_Driver extends StatefulWidget {
-  const Login_Driver({Key? key}) : super(key: key);
+class ForgotPasswordPage extends StatefulWidget {
+  // const ForgotPasswordPage({super.key});
+  const ForgotPasswordPage({Key? key}) : super(key: key);
 
   @override
-  State<Login_Driver> createState() => _Login_DriverState();
+  State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
 }
 
-class _Login_DriverState extends State<Login_Driver> {
+class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   late String _email;
   late String _password;
   final auth = FirebaseAuth.instance;
@@ -48,6 +50,7 @@ class _Login_DriverState extends State<Login_Driver> {
                       _email = value.trim();
                     });
                   },
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                       hintText: 'Email',
                       hintStyle:
@@ -57,39 +60,7 @@ class _Login_DriverState extends State<Login_Driver> {
               ),
             ),
             SizedBox(
-              height: 40,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.0),
               height: 50,
-              width: 280,
-              // color: Colors.grey,
-              decoration: BoxDecoration(
-                  color: Color.fromRGBO(189, 215, 214, 1.0),
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(6.0),
-                  border: Border.all(
-                    color: Color.fromRGBO(127, 157, 156, 1.0),
-                  )),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 3, 15, 3),
-                child: TextField(
-                  onChanged: (value) {
-                    setState(() {
-                      _password = value.trim();
-                    });
-                  },
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: 'Password',
-                      hintStyle:
-                          TextStyle(color: Color.fromRGBO(81, 99, 101, 1.0)),
-                      border: InputBorder.none),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 40,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -104,7 +75,7 @@ class _Login_DriverState extends State<Login_Driver> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => DriverSign()));
+                              builder: (context) => SelectRoute()));
                     }
                   } on FirebaseAuthException catch (error) {
                     switch (error.code) {
@@ -132,8 +103,6 @@ class _Login_DriverState extends State<Login_Driver> {
                     ScaffoldMessenger.of(context)
                         .showSnackBar(SnackBar(content: Text('${errormsg}')));
                   }
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => DriverOptions()));
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
@@ -144,31 +113,13 @@ class _Login_DriverState extends State<Login_Driver> {
                           side: BorderSide(color: Colors.red))),
                 ),
                 child: Text(
-                  'Log in',
+                  "Send reset password link",
                   style: TextStyle(fontSize: 16, color: Colors.white70),
                 ),
               ),
             ),
             SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ForgotPasswordPage()));
-                  },
-                  child: Text("Forgot Password?",
-                      style: TextStyle(
-                        color: Color.fromRGBO(238, 107, 97, 1.0),
-                        fontSize: 16,
-                      )),
-                ),
-              ],
+              height: 40,
             ),
             Divider(
               indent: 30,
@@ -179,17 +130,14 @@ class _Login_DriverState extends State<Login_Driver> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Don't have an account?",
-                  style: TextStyle(
-                      color: Color.fromRGBO(81, 99, 101, 1.0), fontSize: 16),
-                ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DriverSign()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => UserChoiceSignUp()));
                   },
-                  child: Text(" Sign up.",
+                  child: Text("Signup Page",
                       style: TextStyle(
                         color: Color.fromRGBO(238, 107, 97, 1.0),
                         fontSize: 16,
