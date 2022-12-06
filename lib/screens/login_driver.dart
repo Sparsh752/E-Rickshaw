@@ -2,6 +2,7 @@
 
 import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
 import 'package:erickshaw/screens/driversign.dart';
+import 'package:erickshaw/screens/emailVerification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:erickshaw/screens/forgot_password.dart';
@@ -104,7 +105,7 @@ class _Login_DriverState extends State<Login_Driver> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => DriverSign()));
+                              builder: (context) => EmailVerification_Driver()));
                     }
                   } on FirebaseAuthException catch (error) {
                     switch (error.code) {
@@ -132,8 +133,6 @@ class _Login_DriverState extends State<Login_Driver> {
                     ScaffoldMessenger.of(context)
                         .showSnackBar(SnackBar(content: Text('${errormsg}')));
                   }
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => DriverOptions()));
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(

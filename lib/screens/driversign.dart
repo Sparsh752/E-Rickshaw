@@ -271,7 +271,7 @@ class _DriverSignState extends State<DriverSign> {
                           auth.signInWithEmailAndPassword(email: _email.text, password: _password.text);
                           _uid=auth.currentUser?.uid.toString()??"";
                           db.create_driver(_name.text, _uid, _number.text, _email.text, _numberplate.text);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => EmailVerification()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => EmailVerification_Driver()));
 
                         } on FirebaseAuthException catch(error){
                           print(error.code);

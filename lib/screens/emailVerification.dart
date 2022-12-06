@@ -1,16 +1,17 @@
 import 'dart:async';
 
+import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
 import 'package:erickshaw/screens/login_driver.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-class EmailVerification extends StatefulWidget {
-  const EmailVerification({Key? key}) : super(key: key);
+class EmailVerification_Driver extends StatefulWidget {
+  const EmailVerification_Driver({Key? key}) : super(key: key);
 
   @override
-  State<EmailVerification> createState() => _EmailVerificationState();
+  State<EmailVerification_Driver> createState() => _EmailVerification_DriverState();
 }
 
-class _EmailVerificationState extends State<EmailVerification> {
+class _EmailVerification_DriverState extends State<EmailVerification_Driver> {
   bool isEmailVerified = false;
   Timer? timer;
   @override
@@ -34,7 +35,7 @@ class _EmailVerificationState extends State<EmailVerification> {
     await user!.reload();
     if (user.emailVerified) {
       timer?.cancel();
-      FirebaseAuth.instance.signOut();
+      // FirebaseAuth.instance.signOut();
       setState(() {
         isEmailVerified = true;
       });
@@ -44,12 +45,12 @@ class _EmailVerificationState extends State<EmailVerification> {
     try{
       await FirebaseAuth.instance.currentUser!.sendEmailVerification();}
     catch(e){
-      SnackBar snackBar = const SnackBar(content: Text("Error"));
+      SnackBar snackBar = const SnackBar(content: Text("Too many request. Please Wait."));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
   @override
-  Widget build(BuildContext context)=> isEmailVerified ? const Login_Driver() : Scaffold(
+  Widget build(BuildContext context)=> isEmailVerified ? const DriverOptions() : Scaffold(
 
       backgroundColor: Color.fromRGBO(239, 242, 221, 1),
       body: Center(child: Column(
@@ -60,20 +61,30 @@ class _EmailVerificationState extends State<EmailVerification> {
             onPressed: (){
               sendVerificationEmail();
             },
-            child: const Text('Send Email again'),
+            child: const Text('Send Email again',
+              style: TextStyle(fontSize: 16, color: Colors.white70),
+            ),
             style: ButtonStyle(
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    // side: BorderSide(color: Colors.red)
+                    borderRadius: BorderRadius.circular(13.0),
+                    side: BorderSide(color: Colors.red)
                   )),
               backgroundColor: MaterialStateProperty.all<Color>(
                   Color.fromRGBO(238, 107, 97, 1.0)),
             ),
           ),
           const SizedBox(height: 20,),
-          const Text('Check your email for verification link'),
-          const Text('Also check spam folder if you can\'t find it'),
+          const Text('Check your email for verification link',
+              style: TextStyle(
+                color: Color.fromRGBO(238, 107, 97, 1.0),
+                fontSize: 16,
+              )),
+          const Text('Also check spam folder if you can\'t find it',
+              style: TextStyle(
+                color: Color.fromRGBO(238, 107, 97, 1.0),
+                fontSize: 16,
+              )),
         ],
       ),)
   );
