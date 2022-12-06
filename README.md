@@ -66,3 +66,19 @@ Please adhere to Codepeak's 'code of conduct'.
 If any doubt, feel free to contact me on Whatsapp or mail. <br/>
 Number: 8770768952 <br/>
 Email: sparshmittal2311@gmail.com
+
+## Screenshots
+
+### Home Screen 
+<img src="Images/Home_page.png" width="200">
+
+### LogIn Option Screen 
+<img src="Images/LogIn.png" width="200">
+
+
+| &nbsp;Driver's Screens&nbsp; | &nbsp;Passenger's Screens&nbsp; |
+| :---------------: | :---------------: |
+| <h4> Driver's SignUp Screen</h4> <img src="Images/Drivers_SignUp.png" width="200" height="400">| <h4>Passenger's SignUp Screen </h4> <img src="Images/Passengers_SignUp.png" width="200" height="400">|
+| <h4> Driver's Login Screen </h4> <img src="Images/Drivers_Login_Page.png" width="200" height="400">| <h4>Passenger's Login Screen </h4> <img src="Images/Passengers_Login_Page.png" width="200" height="400">|
+| <h4> Driver's Home Screen</h4> <img src="Images/Drivers_Home_Page.png" width="200" height="400">| <h4>Passenger's Home Screen  </h4> <img src="Images/Passengers_Home.png" width="200" height="400">|
+| <h4> Passenger's details on driver's Screen </h4> <img src="Images/Passenger_details.png" width="200" height="400">| <h4>Waiting Screen for passenger  </h4> <img src="Images/ride_searching_page.png" width="200" height="400">|
