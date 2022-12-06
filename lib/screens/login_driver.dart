@@ -26,7 +26,7 @@ class _Login_DriverState extends State<Login_Driver> {
         child: Column(
           children: [
             SizedBox(
-              height: 200,
+              height: 180,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20.0),
@@ -150,7 +150,7 @@ class _Login_DriverState extends State<Login_Driver> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
