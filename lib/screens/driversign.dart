@@ -1,3 +1,4 @@
+import 'package:erickshaw/screens/emailVerification.dart';
 import 'package:erickshaw/screens/login_driver.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +73,7 @@ class _DriverSignState extends State<DriverSign> {
                         setState(() {
                           _name.text = value.trim();
                         });},
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: 'Name',
                           hintStyle: TextStyle(
                               color: Color.fromRGBO(81, 99, 101, 1.0)),
@@ -103,7 +104,7 @@ class _DriverSignState extends State<DriverSign> {
                         setState(() {
                           _number.text=value.trim();
                         });},
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: 'Phone Number',
                           hintStyle: TextStyle(
                               color: Color.fromRGBO(81, 99, 101, 1.0)),
@@ -134,7 +135,7 @@ class _DriverSignState extends State<DriverSign> {
                         setState(() {
                           _email.text = value.trim();
                         });},
-                      decoration: InputDecoration(
+                      decoration: const  InputDecoration(
                           hintText: 'Email',
                           hintStyle: TextStyle(
                               color: Color.fromRGBO(81, 99, 101, 1.0)),
@@ -244,45 +245,44 @@ class _DriverSignState extends State<DriverSign> {
                   child: ElevatedButton(
                     onPressed: () async {
 
-                        if(_name.text.isEmpty){
-                            errormsg= "Name can't be empty";
+                      if(_name.text.isEmpty){
+                        errormsg= "Name can't be empty";
 
-                        }else if(_number.text.isEmpty){
-                          errormsg= "Number can't be empty";
-                        }else if(_email.text.isEmpty){
-                            errormsg= "Email can't be empty";
-                        }else if(_password.text.isEmpty){
-                            errormsg = "Password can't be empty";
-                        }else if(_confirmpassword.text.isEmpty){
-                            errormsg= "Confirm Password can't be empty";
-                        }else if(_numberplate.text.isEmpty){
-                            errormsg= "Number Plate can't be empty";
-                        }else if(_confirmpassword.text!=_password.text){
-                            errormsg= "Password doesn't match";
-                        }else if(_number.text.length!=10){
-                          errormsg= "Number is of wrong format";
-                        }else{
-                            errormsg= "";
+                      }else if(_number.text.isEmpty){
+                        errormsg= "Number can't be empty";
+                      }else if(_email.text.isEmpty){
+                        errormsg= "Email can't be empty";
+                      }else if(_password.text.isEmpty){
+                        errormsg = "Password can't be empty";
+                      }else if(_confirmpassword.text.isEmpty){
+                        errormsg= "Confirm Password can't be empty";
+                      }else if(_numberplate.text.isEmpty){
+                        errormsg= "Number Plate can't be empty";
+                      }else if(_confirmpassword.text!=_password.text){
+                        errormsg= "Password doesn't match";
+                      }else if(_number.text.length!=10){
+                        errormsg= "Number is of wrong format";
+                      }else{
+                        errormsg= "";
+                      }
+                      if(errormsg==""){
+                        try {
+                          await auth.createUserWithEmailAndPassword(email: _email.text, password: _password.text);
+                          auth.signInWithEmailAndPassword(email: _email.text, password: _password.text);
+                          _uid=auth.currentUser?.uid.toString()??"";
+                          db.create_driver(_name.text, _uid, _number.text, _email.text, _numberplate.text);
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => EmailVerification_Driver()));
+
+                        } on FirebaseAuthException catch(error){
+                          print(error.code);
+                          Fluttertoast.showToast(msg: error.code, toastLength: Toast.LENGTH_SHORT,gravity: ToastGravity.CENTER,timeInSecForIosWeb: 1);
                         }
-                        if(errormsg==""){
-                            try {
-                              await auth.createUserWithEmailAndPassword(email: _email.text, password: _password.text);
-                              auth.signInWithEmailAndPassword(email: _email.text, password: _password.text);
-                              _uid=auth.currentUser?.uid.toString()??"";
-                              db.create_driver(_name.text, _uid, _number.text, _email.text, _numberplate.text);
-                              auth.signOut();
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => Login_Driver()));
 
-                            } on FirebaseAuthException catch(error){
-                              print(error.code);
-                              Fluttertoast.showToast(msg: error.code, toastLength: Toast.LENGTH_SHORT,gravity: ToastGravity.CENTER,timeInSecForIosWeb: 1);
-                            }
-
-                        }else{
-                            print(errormsg);
-                            Fluttertoast.showToast(msg: errormsg!, toastLength: Toast.LENGTH_SHORT,gravity: ToastGravity.CENTER,timeInSecForIosWeb: 1);
-                            // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Hello')));
-                        }
+                      }else{
+                        print(errormsg);
+                        Fluttertoast.showToast(msg: errormsg!, toastLength: Toast.LENGTH_SHORT,gravity: ToastGravity.CENTER,timeInSecForIosWeb: 1);
+                        // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Hello')));
+                      }
 
 
 
@@ -291,9 +291,9 @@ class _DriverSignState extends State<DriverSign> {
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        // side: BorderSide(color: Colors.red)
-                      )),
+                            borderRadius: BorderRadius.circular(18.0),
+                            // side: BorderSide(color: Colors.red)
+                          )),
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Color.fromRGBO(238, 107, 97, 1.0)),
                     ),

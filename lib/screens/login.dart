@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:erickshaw/screens/customer.dart';
+import 'package:erickshaw/screens/emailVerification_passenger.dart';
 import 'package:erickshaw/screens/select_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +106,7 @@ class _LoginState extends State<Login> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SelectRoute()));
+                              builder: (context) => EmailVerification_Passenger()));
                     }
                   } on FirebaseAuthException catch (error) {
                     switch (error.code) {
