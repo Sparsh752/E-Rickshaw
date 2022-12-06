@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="16"
-6-->/Users/sparshmittal/development/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/android/src/main/AndroidManifest.xml
+6-->/Users/tusharbanik/flutter/flutter contents/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/android/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="16" />
-7-->/Users/sparshmittal/development/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/android/src/main/AndroidManifest.xml
+7-->/Users/tusharbanik/flutter/flutter contents/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.1/android/src/main/AndroidManifest.xml
 8
 9</manifest>
