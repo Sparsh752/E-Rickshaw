@@ -53,19 +53,19 @@ class _EmailVerificationState extends State<EmailVerification> {
    appBar: AppBar(
      title: const Text('Email Verification'),
    ),
-  body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        ElevatedButton(
-          onPressed: (){
-            sendVerificationEmail();
-          },
-          child: const Text('Send Email again'),
-        ),
-        const Text('Check your email for verification link'),
-        const Text('Also check spam folder if you can\'t find it'),
-      ],
-    )
+  body: Center(child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      ElevatedButton(
+        onPressed: (){
+          sendVerificationEmail();
+        },
+        child: const Text('Send Email again'),
+      ),
+      const Text('Check your email for verification link'),
+      const Text('Also check spam folder if you can\'t find it'),
+    ],
+  ),)
   );
 }
