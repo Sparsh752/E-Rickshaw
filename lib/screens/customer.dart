@@ -1,3 +1,4 @@
+import 'package:erickshaw/screens/emailVerification.dart';
 import 'package:erickshaw/screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -228,8 +229,8 @@ class _customer_loginState extends State<customer_login> {
                         auth.signInWithEmailAndPassword(email: _email.text, password: _password.text);
                         _uid=auth.currentUser?.uid.toString()??"";
                         db.create_passenger(_name.text,_uid,_number.text,_email.text);
-                        auth.signOut();
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
+                        // auth.signOut();
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => EmailVerification()));
                       } on FirebaseAuthException catch(error){
                         print(error.code);
                         Fluttertoast.showToast(msg: error.code, toastLength: Toast.LENGTH_SHORT,gravity: ToastGravity.CENTER,timeInSecForIosWeb: 1);
