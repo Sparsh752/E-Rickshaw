@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
         child: Column(
           children: [
             SizedBox(
-              height: 200,
+              height: 180,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20.0),
@@ -149,7 +149,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
