@@ -29,7 +29,7 @@ class _LandingState extends State<Landing> {
     ThemeData _darkTheme = ThemeData(
       primarySwatch: Colors.red,
       brightness: Brightness.dark,
-      appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
+      // appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
 
       // buttonTheme: ButtonThemeData(buttonColor: Colors.white)
     );
