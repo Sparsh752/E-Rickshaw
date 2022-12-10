@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -19,8 +20,9 @@ class SplashScreen extends StatelessWidget {
           ),
           splashIconSize: double.infinity,
           nextScreen: Landing(),
-          splashTransition: SplashTransition.fadeTransition,
-          duration: 1000,
+          splashTransition: SplashTransition.scaleTransition,
+          duration: 2500,
+          pageTransitionType: PageTransitionType.leftToRight,
         ));
   }
 }

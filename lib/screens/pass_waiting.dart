@@ -58,11 +58,11 @@ class _PassWaitState extends State<PassWait> {
       primarySwatch: Colors.amber,
       brightness: Brightness.light,
       // buttonTheme: ButtonThemeData(buttonColor: Colors.black),
-      appBarTheme: AppBarTheme(backgroundColor: Colors.red),
+      appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(0, 51, 102, 1)),
     );
 
     ThemeData _darkTheme = ThemeData(
-      primarySwatch: Colors.red,
+      primarySwatch: Colors.deepOrange,
       brightness: Brightness.dark,
       // appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
 
@@ -71,49 +71,62 @@ class _PassWaitState extends State<PassWait> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: _iconbool ? _darkTheme : _lightTheme,
-        home: Scaffold(
-          appBar: AppBar(
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    setState(() {
-                      _iconbool = !_iconbool;
-                    });
-                  },
-                  icon: Icon(_iconbool ? _iconDark : _iconLight))
-            ],
-          ),
-          // backgroundColor: Color.fromRGBO(239, 242, 221, 1),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircularProgressIndicator(
-                  color: Color.fromRGBO(238, 107, 97, 1.0),
+        home: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1527708990900-6675e4de3e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmlja3NoYXd8ZW58MHx8MHx8&w=1000&q=80',
+                    ),
+                    colorFilter: new ColorFilter.mode(
+                        Colors.black.withOpacity(0.4), BlendMode.dstATop),
+                    fit: BoxFit.cover)),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+
+              appBar: AppBar(
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _iconbool = !_iconbool;
+                        });
+                      },
+                      icon: Icon(_iconbool ? _iconDark : _iconLight))
+                ],
+              ),
+              // backgroundColor: Color.fromRGBO(239, 242, 221, 1),
+              body: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircularProgressIndicator(
+                      color: Color.fromRGBO(238, 107, 97, 1.0),
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    Text('Waiting for driver to confirm your ride'),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        db.delete(_uid);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SelectRoute()));
+                      },
+                      child: Text('Cancel Ride'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Color.fromRGBO(238, 107, 97, 1.0)),
+                      ),
+                    )
+                  ],
                 ),
-                SizedBox(
-                  height: 25,
-                ),
-                Text('Waiting for driver to confirm your ride'),
-                SizedBox(
-                  height: 25,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    db.delete(_uid);
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => SelectRoute()));
-                  },
-                  child: Text('Cancel Ride'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromRGBO(238, 107, 97, 1.0)),
-                  ),
-                )
-              ],
-            ),
-          ),
-        ));
+              ),
+            )));
   }
 
   Future<void> CheckAccepted() async {

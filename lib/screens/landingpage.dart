@@ -23,12 +23,15 @@ class _LandingState extends State<Landing> {
       primarySwatch: Colors.amber,
       brightness: Brightness.light,
       // buttonTheme: ButtonThemeData(buttonColor: Colors.amberAccent),
-      appBarTheme: AppBarTheme(backgroundColor: Colors.red),
+      appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(0, 51, 102, 1)),
     );
 
     ThemeData _darkTheme = ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.deepOrange,
         brightness: Brightness.dark,
+        appBarTheme:
+            AppBarTheme(backgroundColor: Color.fromARGB(0, 51, 102, 1)),
+
         // appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
         buttonTheme:
             ButtonThemeData(buttonColor: Color.fromARGB(255, 224, 72, 26)));
@@ -39,8 +42,10 @@ class _LandingState extends State<Landing> {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
-                      'https://cdn.motor1.com/images/mgl/MkkLBN/s1/audi-e-rickshaw-concept-powered-by-second-life-e-tron-battery-modules.jpg',
+                      'https://images.unsplash.com/photo-1527708990900-6675e4de3e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmlja3NoYXd8ZW58MHx8MHx8&w=1000&q=80',
                     ),
+                    colorFilter: new ColorFilter.mode(
+                        Colors.black.withOpacity(0.4), BlendMode.dstATop),
                     fit: BoxFit.fitHeight)),
             child: Scaffold(
               backgroundColor: Colors.transparent,

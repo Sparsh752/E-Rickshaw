@@ -46,11 +46,11 @@ class _SelectRouteState extends State<SelectRoute> {
       primarySwatch: Colors.amber,
       brightness: Brightness.light,
       // buttonTheme: ButtonThemeData(buttonColor: Colors.black),
-      appBarTheme: AppBarTheme(backgroundColor: Colors.red),
+      appBarTheme: AppBarTheme(backgroundColor: Color.fromARGB(0, 51, 102, 1)),
     );
 
     ThemeData _darkTheme = ThemeData(
-      primarySwatch: Colors.red,
+      primarySwatch: Colors.deepOrange,
       brightness: Brightness.dark,
       // appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
 
@@ -59,221 +59,239 @@ class _SelectRouteState extends State<SelectRoute> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: _iconbool ? _darkTheme : _lightTheme,
-        home: Scaffold(
-          // backgroundColor: Color.fromRGBO(239, 242, 221, 1),
-          appBar: AppBar(
-            leadingWidth: 0,
-            leading: Text(''),
-            title: Text('Select Route'),
-            backgroundColor: Color.fromRGBO(238, 107, 97, 1.0),
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    auth.signOut();
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => Landing()));
-                  },
-                  icon: Icon(Icons.logout))
-            ],
-          ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 1, horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "FROM",
-                        style: TextStyle(
-                          color: Color.fromRGBO(127, 157, 156, 1.0),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                        // textAlign: TextAlign.start,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 15,
-                    right: 15,
-                    top: 8,
-                  ),
-                  decoration: BoxDecoration(
-                      color: Color.fromRGBO(189, 215, 214, 1.0),
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(6.0),
-                      border: Border.all(
-                        color: Color.fromRGBO(127, 157, 156, 1.0),
-                      )),
-                  height: 70,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Builder(builder: (context) {
-                    return DropdownButtonHideUnderline(
-                      child: DropdownButton<String>(
-                        dropdownColor: const Color.fromRGBO(189, 215, 214, 1.0),
-                        isExpanded: true,
-                        // style: secondStyle,
-                        icon: const Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: Color.fromRGBO(127, 157, 156, 1.0),
-                          size: 30,
-                        ),
-                        value: fromValue,
-                        items: <String>[
-                          "KV Gate",
-                          "Academic Complex",
-                          "Market Complex",
-                          "Hostel 1",
-                          "Hostel 2",
-                          "Subansiri/Dhansiri",
-                          "MSH",
-                          "GuestHouse",
-                          "Hospital",
-                          "B/C/D/E/F type"
-                        ].map((String val) {
-                          return DropdownMenuItem<String>(
-                            value: val,
-                            child: Text(val),
-                          );
-                        }).toList(),
-                        onChanged: (String? val) {
-                          fromValue = val!;
-                          setState(() {});
-                        },
-                      ),
-                    );
-                  }),
-                ),
-                SizedBox(
-                  height: 35,
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 1, horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "TO",
-                        style: TextStyle(
-                          color: Color.fromRGBO(127, 157, 156, 1.0),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                        // textAlign: TextAlign.start,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 15,
-                    right: 15,
-                    top: 8,
-                  ),
-                  decoration: BoxDecoration(
-                      color: Color.fromRGBO(189, 215, 214, 1.0),
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(6.0),
-                      border: Border.all(
-                        color: Color.fromRGBO(127, 157, 156, 1.0),
-                      )),
-                  height: 70,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Builder(builder: (context) {
-                    return DropdownButtonHideUnderline(
-                      child: DropdownButton<String>(
-                        dropdownColor: const Color.fromRGBO(189, 215, 214, 1.0),
-                        isExpanded: true,
-                        // style: secondStyle,
-                        icon: const Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: Color.fromRGBO(127, 157, 156, 1.0),
-                          size: 30,
-                        ),
-                        value: toValue,
-                        items: <String>[
-                          "KV Gate",
-                          "Academic Complex",
-                          "Market Complex",
-                          "Hostel 1",
-                          "Hostel 2",
-                          "Subansiri/Dhansiri",
-                          "MSH",
-                          "GuestHouse",
-                          "Hospital",
-                          "B/C/D/E/F type"
-                        ].map((String val) {
-                          return DropdownMenuItem<String>(
-                            value: val,
-                            child: Text(val),
-                          );
-                        }).toList(),
-                        onChanged: (String? val) {
-                          toValue = val!;
-                          setState(() {});
-                        },
-                      ),
-                    );
-                  }),
-                ),
-                SizedBox(
-                  height: 80,
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  width: 230,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (toValue == "") {
-                        errormsg = "Destination address missing";
-                      } else if (fromValue == "") {
-                        errormsg = "PickUp address missing";
-                      } else {
-                        errormsg = "";
-                      }
-                      if (errormsg == "") {
-                        db.create_request(fromValue!, toValue!, _uid, '0', "");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PassWait()));
-                      } else {
-                        Fluttertoast.showToast(
-                            msg: errormsg!,
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.CENTER,
-                            timeInSecForIosWeb: 1);
-                      }
-                      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage()));
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromRGBO(238, 107, 97, 1.0)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(13.0),
-                              side: BorderSide(color: Colors.red))),
+        home: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1527708990900-6675e4de3e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmlja3NoYXd8ZW58MHx8MHx8&w=1000&q=80',
                     ),
-                    child: Text(
-                      'Search',
-                      style: TextStyle(fontSize: 16, color: Colors.white70),
+                    colorFilter: new ColorFilter.mode(
+                        Colors.black.withOpacity(0.4), BlendMode.dstATop),
+                    fit: BoxFit.cover)),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+
+              // backgroundColor: Color.fromRGBO(239, 242, 221, 1),
+              appBar: AppBar(
+                leadingWidth: 0,
+                leading: Text(''),
+                title: Text('Select Route'),
+                backgroundColor: Color.fromARGB(0, 51, 102, 1),
+                actions: [
+                  IconButton(
+                      onPressed: () {
+                        auth.signOut();
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => Landing()));
+                      },
+                      icon: Icon(Icons.logout))
+                ],
+              ),
+              body: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 1, horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "FROM",
+                            style: TextStyle(
+                              color: Color.fromRGBO(127, 157, 156, 1.0),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                            // textAlign: TextAlign.start,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ),
-        ));
+                    Container(
+                      margin: const EdgeInsets.only(
+                        left: 15,
+                        right: 15,
+                        top: 8,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(189, 215, 214, 1.0),
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(
+                            color: Color.fromRGBO(127, 157, 156, 1.0),
+                          )),
+                      height: 70,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      child: Builder(builder: (context) {
+                        return DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            dropdownColor:
+                                const Color.fromRGBO(189, 215, 214, 1.0),
+                            isExpanded: true,
+                            // style: secondStyle,
+                            icon: const Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: Color.fromRGBO(127, 157, 156, 1.0),
+                              size: 30,
+                            ),
+                            value: fromValue,
+                            items: <String>[
+                              "KV Gate",
+                              "Academic Complex",
+                              "Market Complex",
+                              "Hostel 1",
+                              "Hostel 2",
+                              "Subansiri/Dhansiri",
+                              "MSH",
+                              "GuestHouse",
+                              "Hospital",
+                              "B/C/D/E/F type"
+                            ].map((String val) {
+                              return DropdownMenuItem<String>(
+                                value: val,
+                                child: Text(val),
+                              );
+                            }).toList(),
+                            onChanged: (String? val) {
+                              fromValue = val!;
+                              setState(() {});
+                            },
+                          ),
+                        );
+                      }),
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 1, horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "TO",
+                            style: TextStyle(
+                              color: Color.fromRGBO(127, 157, 156, 1.0),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                            // textAlign: TextAlign.start,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        left: 15,
+                        right: 15,
+                        top: 8,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Color.fromRGBO(189, 215, 214, 1.0),
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(6.0),
+                          border: Border.all(
+                            color: Color.fromRGBO(127, 157, 156, 1.0),
+                          )),
+                      height: 70,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      child: Builder(builder: (context) {
+                        return DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            dropdownColor:
+                                const Color.fromRGBO(189, 215, 214, 1.0),
+                            isExpanded: true,
+                            // style: secondStyle,
+                            icon: const Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: Color.fromRGBO(127, 157, 156, 1.0),
+                              size: 30,
+                            ),
+                            value: toValue,
+                            items: <String>[
+                              "KV Gate",
+                              "Academic Complex",
+                              "Market Complex",
+                              "Hostel 1",
+                              "Hostel 2",
+                              "Subansiri/Dhansiri",
+                              "MSH",
+                              "GuestHouse",
+                              "Hospital",
+                              "B/C/D/E/F type"
+                            ].map((String val) {
+                              return DropdownMenuItem<String>(
+                                value: val,
+                                child: Text(val),
+                              );
+                            }).toList(),
+                            onChanged: (String? val) {
+                              toValue = val!;
+                              setState(() {});
+                            },
+                          ),
+                        );
+                      }),
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      width: 230,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (toValue == "") {
+                            errormsg = "Destination address missing";
+                          } else if (fromValue == "") {
+                            errormsg = "PickUp address missing";
+                          } else {
+                            errormsg = "";
+                          }
+                          if (errormsg == "") {
+                            db.create_request(
+                                fromValue!, toValue!, _uid, '0', "");
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PassWait()));
+                          } else {
+                            Fluttertoast.showToast(
+                                msg: errormsg!,
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.CENTER,
+                                timeInSecForIosWeb: 1);
+                          }
+                          // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage()));
+                        },
+                        style: ButtonStyle(
+                          // backgroundColor: MaterialStateProperty.all<Color>(
+                          //     Color.fromRGBO(238, 107, 97, 1.0)),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(13.0),
+                                      side: BorderSide(color: Colors.red))),
+                        ),
+                        child: Text(
+                          'Search',
+                          style: TextStyle(
+                            fontSize: 16,
+                            // color: Colors.white70
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )));
   }
 
   Future<void> checking() async {
