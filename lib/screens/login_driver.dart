@@ -72,7 +72,7 @@ class _Login_DriverState extends State<Login_Driver> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 180,
+                      height: 117,
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 20.0),
