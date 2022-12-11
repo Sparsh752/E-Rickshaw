@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 180,
+                      height: 117,
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 20.0),
