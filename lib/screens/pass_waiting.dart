@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unnecessary_new, no_leading_underscores_for_local_identifiers
 
 import 'dart:async';
 
@@ -119,9 +119,9 @@ class _PassWaitState extends State<PassWait> {
                       },
                       child: Text('Cancel Ride'),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Color.fromRGBO(238, 107, 97, 1.0)),
-                      ),
+                          // backgroundColor: MaterialStateProperty.all<Color>(
+                          //     Color.fromRGBO(238, 107, 97, 1.0)),
+                          ),
                     )
                   ],
                 ),
