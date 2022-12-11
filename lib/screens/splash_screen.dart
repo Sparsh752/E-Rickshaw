@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, unnecessary_import, implementation_imports, prefer_const_constructors
+// ignore_for_file: unused_import, unnecessary_import, implementation_imports, prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:erickshaw/screens/landingpage.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +16,9 @@ class SplashScreen extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: AnimatedSplashScreen(
           splash: Image.asset(
-            'assets/images/logo6.png',
+            'assets/images/logo7.png',
           ),
+          backgroundColor: Colors.black,
           splashIconSize: double.infinity,
           nextScreen: Landing(),
           splashTransition: SplashTransition.scaleTransition,

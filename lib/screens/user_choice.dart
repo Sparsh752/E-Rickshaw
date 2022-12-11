@@ -42,8 +42,8 @@ class _UserChoice extends State<UserChoice> {
         home: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(
-                      'https://images.unsplash.com/photo-1527708990900-6675e4de3e03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmlja3NoYXd8ZW58MHx8MHx8&w=1000&q=80',
+                    image: AssetImage(
+                      'assets/images/bg.png',
                     ),
                     colorFilter: new ColorFilter.mode(
                         Colors.black.withOpacity(0.4), BlendMode.dstATop),
