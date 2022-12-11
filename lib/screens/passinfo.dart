@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations, unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations, unnecessary_brace_in_string_interps, unnecessary_new, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 
@@ -108,7 +108,7 @@ class _UserdetailsState extends State<Userdetails> {
                           letterSpacing: 2.0,
                           fontSize: 25.0,
                           fontWeight: FontWeight.bold,
-                          color: Color.fromRGBO(238, 107, 97, 1.0)),
+                          color: Color.fromARGB(255, 228, 214, 55)),
                     ),
                     SizedBox(
                       height: 40,
@@ -128,7 +128,7 @@ class _UserdetailsState extends State<Userdetails> {
                     Text(
                       '${passphone}',
                       style: TextStyle(
-                        color: Color.fromRGBO(238, 107, 97, 1.0),
+                        color: Color.fromARGB(255, 228, 214, 55),
                         letterSpacing: 2.0,
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -153,7 +153,7 @@ class _UserdetailsState extends State<Userdetails> {
                         Text(
                           '${widget.pfrom}',
                           style: TextStyle(
-                            color: Color.fromRGBO(238, 107, 97, 1.0),
+                            color: Color.fromARGB(255, 228, 214, 55),
                             letterSpacing: 2.0,
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -180,7 +180,7 @@ class _UserdetailsState extends State<Userdetails> {
                         Text(
                           '${widget.to}',
                           style: TextStyle(
-                            color: Color.fromRGBO(238, 107, 97, 1.0),
+                            color: Color.fromARGB(255, 228, 214, 55),
                             letterSpacing: 2.0,
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,

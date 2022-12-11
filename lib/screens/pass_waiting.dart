@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, unnecessary_new, no_leading_underscores_for_local_identifiers
 
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:erickshaw/screens/driverinfo.dart';
 import 'package:erickshaw/screens/select_route.dart';
@@ -105,7 +106,10 @@ class _PassWaitState extends State<PassWait> {
                     SizedBox(
                       height: 25,
                     ),
-                    Text('Waiting for driver to confirm your ride'),
+                    Text(
+                      'Waiting for driver to confirm your ride',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     SizedBox(
                       height: 25,
                     ),
