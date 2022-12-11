@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CardModel extends StatefulWidget {
@@ -13,7 +15,7 @@ class _CardModelState extends State<CardModel> {
     return Card(
       elevation: 10,
       child: Container(
-        width: MediaQuery.of(context).size.width*0.9,
+        width: MediaQuery.of(context).size.width * 0.9,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           child: Row(
@@ -27,17 +29,16 @@ class _CardModelState extends State<CardModel> {
                 width: 60,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: (){
+                  onPressed: () {
                     // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage()));
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(238, 107, 97, 1.0)),
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Color.fromRGBO(238, 107, 97, 1.0)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(13.0),
-                            side: BorderSide(color: Colors.red)
-                        )
-                    ),
+                            side: BorderSide(color: Colors.red))),
                   ),
                   child: Center(
                     child: Icon(
