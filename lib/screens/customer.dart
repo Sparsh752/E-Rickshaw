@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, use_build_context_synchronously, unnecessary_new
 
-import 'package:erickshaw/screens/emailVerification.dart';
 import 'package:erickshaw/screens/emailVerification_passenger.dart';
 import 'package:erickshaw/screens/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';

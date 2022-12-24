@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
-import 'package:erickshaw/screens/login_driver.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 class EmailVerification_Driver extends StatefulWidget {
