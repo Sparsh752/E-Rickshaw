@@ -1,11 +1,10 @@
 // ignore_for_file: prefer_const_constructors, unused_element, use_build_context_synchronously
 
-import 'package:erickshaw/screens/driver_card/DriverOptions.dart';
 import 'package:erickshaw/screens/driversign.dart';
 import 'package:erickshaw/screens/emailVerification.dart';
+import 'package:erickshaw/screens/forgot_password.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:erickshaw/screens/forgot_password.dart';
 
 class Login_Driver extends StatefulWidget {
   const Login_Driver({Key? key}) : super(key: key);

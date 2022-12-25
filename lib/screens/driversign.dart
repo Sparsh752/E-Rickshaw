@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
+import 'package:erickshaw/database.dart';
 import 'package:erickshaw/screens/emailVerification.dart';
 import 'package:erickshaw/screens/login_driver.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:erickshaw/database.dart';
 
 class DriverSign extends StatefulWidget {
   const DriverSign({Key? key}) : super(key: key);

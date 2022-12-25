@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
-import 'package:erickshaw/screens/driversign.dart';
 import 'package:erickshaw/screens/login.dart';
 import 'package:erickshaw/screens/login_driver.dart';
 import 'package:flutter/material.dart';

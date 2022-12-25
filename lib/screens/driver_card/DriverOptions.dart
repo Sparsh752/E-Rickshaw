@@ -2,7 +2,6 @@
 
 import 'dart:async';
 
-import 'package:erickshaw/screens/driver_card/card_model.dart';
 import 'package:erickshaw/screens/landingpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
