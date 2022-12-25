@@ -75,7 +75,7 @@ class _SelectRouteState extends State<SelectRoute> {
               appBar: AppBar(
                 leadingWidth: 0,
                 leading: Text(''),
-                title: Text('Select Route'),
+                title: Text('Select Route', style: TextStyle(color: Colors.yellow),),
                 backgroundColor: Color.fromARGB(0, 51, 102, 1),
                 actions: [
                   IconButton(
@@ -84,7 +84,8 @@ class _SelectRouteState extends State<SelectRoute> {
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(builder: (context) => Landing()));
                       },
-                      icon: Icon(Icons.logout))
+                      icon: Icon(Icons.logout),
+                      color: Colors.yellow,)
                 ],
               ),
               body: Center(
