@@ -251,14 +251,14 @@ class _SelectRouteState extends State<SelectRoute> {
                             errormsg = "Pickup or Destination address can't be Empty!";
                           }
                           else if (toValue==null) {
-                            print(toValue);
+
                             errormsg = "Destination address missing";
                           } else if (fromValue==null) {
-                            print(toValue);
+                            
                             errormsg = "PickUp address missing";
                           }
                           else if(fromValue==toValue){
-                            print(toValue);
+                            
                             errormsg = "PickUp address and Destination address must be different";
                           }
                           else
