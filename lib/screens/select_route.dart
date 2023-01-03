@@ -248,11 +248,22 @@ class _SelectRouteState extends State<SelectRoute> {
                       height: 50,
                       child: ElevatedButton(
                         onPressed: () {
-                          if (toValue == "") {
+                          if(toValue==null && fromValue==null){
+                            errormsg = "Pickup or Destination address can't be Empty!";
+                          }
+                          else if (toValue==null) {
+
                             errormsg = "Destination address missing";
-                          } else if (fromValue == "") {
+                          } else if (fromValue==null) {
+                            
                             errormsg = "PickUp address missing";
-                          } else {
+                          }
+                          else if(fromValue==toValue){
+                            
+                            errormsg = "PickUp address and Destination address must be different";
+                          }
+                          else
+                          {
                             errormsg = "";
                           }
                           if (errormsg == "") {
@@ -266,7 +277,7 @@ class _SelectRouteState extends State<SelectRoute> {
                             Fluttertoast.showToast(
                                 msg: errormsg!,
                                 toastLength: Toast.LENGTH_SHORT,
-                                gravity: ToastGravity.CENTER,
+                                gravity: ToastGravity.BOTTOM,
                                 timeInSecForIosWeb: 1);
                           }
                           // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage()));
