@@ -2,14 +2,14 @@
 
 import 'dart:async';
 
-import 'package:erickshaw/screens/landingpage.dart';
+import 'package:erickshaw/screens/Landing_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../database.dart';
-import '../passinfo.dart';
+import 'Rider_info.dart';
 
 class DriverOptions extends StatefulWidget {
   const DriverOptions({Key? key}) : super(key: key);

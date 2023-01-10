@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
-import 'package:erickshaw/screens/customer.dart';
-import 'package:erickshaw/screens/driversign.dart';
-import 'package:erickshaw/screens/login.dart';
+import 'package:erickshaw/screens/Passenger_card/Passenger_signup.dart';
+import 'package:erickshaw/screens/driver_card/Driver_signup.dart';
+import 'package:erickshaw/screens/Passenger_card/Passenger_login.dart';
 import 'package:flutter/material.dart';
 
 class UserChoiceSignUp extends StatefulWidget {
