@@ -40,6 +40,31 @@ class _SelectRouteState extends State<SelectRoute> {
   String? fromValue;
   String? toValue;
   String? errormsg;
+  int? pos;
+  var list1 = [
+    "KV Gate",
+    "Academic Complex",
+    "Market Complex",
+    "Hostel 1",
+    "Hostel 2",
+    "Subansiri/Dhansiri",
+    "MSH",
+    "GuestHouse",
+    "Hospital",
+    "B/C/D/E/F type"
+  ];
+  var list2 = [
+    "KV Gate",
+    "Academic Complex",
+    "Market Complex",
+    "Hostel 1",
+    "Hostel 2",
+    "Subansiri/Dhansiri",
+    "MSH",
+    "GuestHouse",
+    "Hospital",
+    "B/C/D/E/F type"
+  ];
   @override
   Widget build(BuildContext context) {
     ThemeData _lightTheme = ThemeData(
@@ -139,25 +164,29 @@ class _SelectRouteState extends State<SelectRoute> {
                               size: 30,
                             ),
                             value: fromValue,
-                            items: <String>[
-                              "KV Gate",
-                              "Academic Complex",
-                              "Market Complex",
-                              "Hostel 1",
-                              "Hostel 2",
-                              "Subansiri/Dhansiri",
-                              "MSH",
-                              "GuestHouse",
-                              "Hospital",
-                              "B/C/D/E/F type"
-                            ].map((String val) {
+                            items: list1.map((String val) {
                               return DropdownMenuItem<String>(
                                 value: val,
                                 child: Text(val),
                               );
                             }).toList(),
+                            onTap:(){
+                              list2 = [
+                                "KV Gate",
+                                "Academic Complex",
+                                "Market Complex",
+                                "Hostel 1",
+                                "Hostel 2",
+                                "Subansiri/Dhansiri",
+                                "MSH",
+                                "GuestHouse",
+                                "Hospital",
+                                "B/C/D/E/F type"
+                              ];
+                            },
                             onChanged: (String? val) {
-                              fromValue = val!;
+                              fromValue = val;
+                              list2.remove(fromValue!);
                               setState(() {});
                             },
                           ),
@@ -214,25 +243,29 @@ class _SelectRouteState extends State<SelectRoute> {
                               size: 30,
                             ),
                             value: toValue,
-                            items: <String>[
-                              "KV Gate",
-                              "Academic Complex",
-                              "Market Complex",
-                              "Hostel 1",
-                              "Hostel 2",
-                              "Subansiri/Dhansiri",
-                              "MSH",
-                              "GuestHouse",
-                              "Hospital",
-                              "B/C/D/E/F type"
-                            ].map((String val) {
-                              return DropdownMenuItem<String>(
-                                value: val,
-                                child: Text(val),
-                              );
+                            items: list2.map((String val) {
+                            return DropdownMenuItem<String>(
+                              value: val,
+                              child: Text(val),
+                            );
                             }).toList(),
+                            onTap: (){
+                              list1 = [
+                                "KV Gate",
+                                "Academic Complex",
+                                "Market Complex",
+                                "Hostel 1",
+                                "Hostel 2",
+                                "Subansiri/Dhansiri",
+                                "MSH",
+                                "GuestHouse",
+                                "Hospital",
+                                "B/C/D/E/F type"
+                              ];
+                            },
                             onChanged: (String? val) {
                               toValue = val!;
+                              list1.remove(toValue);
                               setState(() {});
                             },
                           ),
