@@ -91,6 +91,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             });
                           },
                           keyboardType: TextInputType.emailAddress,
+                          autofillHints: [AutofillHints.email],
                           decoration: InputDecoration(
                               hintText: 'Email',
                               hintStyle: TextStyle(

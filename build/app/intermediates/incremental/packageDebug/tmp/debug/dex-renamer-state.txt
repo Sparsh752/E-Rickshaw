@@ -1,19 +1,19 @@
-#Wed Nov 16 21:25:45 IST 2022
-path.4=12/classes.dex
-path.3=1/classes.dex
+#Wed Jan 11 01:29:03 IST 2023
+path.4=1/classes.dex
+path.3=12/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.5=classes2.dex
 path.0=classes.dex
-base.4=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-base.3=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.2=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.1=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
-base.0=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.4=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.3=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.2=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.1=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.0=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 renamed.5=classes6.dex
 renamed.4=classes5.dex
-base.5=/Users/sparshmittal/Desktop/E-Rickshaw-project/E-rickshaw-3/build/app/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.5=D\:\\codepeak\\E-Rickshaw\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex

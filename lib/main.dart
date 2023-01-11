@@ -1,4 +1,4 @@
-import 'package:erickshaw/screens/landingpage.dart';
+import 'package:erickshaw/screens/Landing_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
